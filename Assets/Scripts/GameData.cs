@@ -7,6 +7,7 @@ using UnityEngine.Events;
 public class GameData : ScriptableObject
 {
     public float LaunchForce = 10.0f;
+    public float indicatorMax = 0.95f; //absolute value of maximum indicator value
 
     [HideInInspector]
     public UnityEvent OnPhaseChange;
@@ -24,5 +25,6 @@ public class GameData : ScriptableObject
 
     [HideInInspector]
     //the moving number for the power indicator. -50 to 50
-    public int IndicatorValue = 0;
+    public float IndicatorValue = 0.0f;
+
 }

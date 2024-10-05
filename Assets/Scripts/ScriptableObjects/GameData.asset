@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: GameData
   m_EditorClassIdentifier: 
   LaunchForce: 25
+  indicatorMax: 0.95
   OnPhaseChange:
     m_PersistentCalls:
       m_Calls: []
-  IndicatorValue: 0
+  IndicatorValue: -0.41035938

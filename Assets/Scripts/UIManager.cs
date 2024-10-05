@@ -21,11 +21,13 @@ public class UIManager : MonoBehaviour
     [SerializeField]
     RectTransform powerIndicator;
 
+    private float barWidth;
     
     // Start is called before the first frame update
     void Start()
     {
         gameData.OnPhaseChange.AddListener(SetForPhase);
+        barWidth = powerBar.sizeDelta.x;
     }
 
     // Update is called once per frame
@@ -70,6 +72,9 @@ public class UIManager : MonoBehaviour
     private void MoveIndicator()
     {
         //move the indicator back and forth
+        Vector3 pos = powerIndicator.anchoredPosition;
+        float xPos = gameData.IndicatorValue / gameData.indicatorMax * (barWidth/2);
+        powerIndicator.anchoredPosition = new Vector2(xPos, pos.y); 
     }
 
   
