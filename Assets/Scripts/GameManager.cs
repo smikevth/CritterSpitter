@@ -23,6 +23,7 @@ public class GameManager : MonoBehaviour
     
     void Start()
     {
+        gameData.IntroDialogueIndex = -1;
         InitializeGameData();
         //critterCollider = critter.GetComponent<Collider>();
         gameData.CritterInitPos = critter.transform.position;
@@ -92,10 +93,21 @@ public class GameManager : MonoBehaviour
             case 0:
                 //intro
 
-                //if intro is still going, advance text
-
-                //at end, next phase
-                gameData.CurrentPhase++;
+                //if text is currently printing, skip to end of it
+                if(gameData.IsTextPrinting)
+                {
+                    gameData.SkipText = true;
+                }
+                //if text done printing, go to next text if there are any
+                else if(gameData.IntroDialogueIndex < gameData.IntroDialogues.Length - 1)
+                {
+                    gameData.IntroDialogueIndex++;
+                }
+                //no more texts, next phase
+                else
+                {
+                    gameData.CurrentPhase++;
+                }
                 break;
             case 1:
                 //power phase
@@ -161,6 +173,9 @@ public class GameManager : MonoBehaviour
         gameData.Distance = 0;
         gameData.DistanceTimer = 0.0f;
         gameData.LastDistance = 0.0f;
+        gameData.SkipText = false;
+        gameData.IsTextPrinting = false;
+        gameData.IntroDialogueIndex = 0;
     }
 
     /// <summary>

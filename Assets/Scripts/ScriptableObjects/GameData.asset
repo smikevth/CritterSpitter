@@ -14,8 +14,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LaunchForce: 7
   IndicatorMax: 0.95
-  Distance: 0
+  Distance: 251.38249
+  DistanceTimer: 1.5155318
+  DistanceTimerMax: 2
+  LastDistance: 249.98938
+  StoppedThreshold: 1
   OnPhaseChange:
     m_PersistentCalls:
       m_Calls: []
-  IndicatorValue: 0
+  IndicatorValue: -0.0865716
+  CritterInitPos: {x: 0, y: 7.02, z: 1.8}
+  IsTextPrinting: 0
+  SkipText: 0
+  TextSpeed: 0.05
+  OnIntroDialogueChange:
+    m_PersistentCalls:
+      m_Calls: []
+  IntroDialogues:
+  - {fileID: 11400000, guid: 78825ceaa389a4247a913b2a4aa1400f, type: 2}
+  - {fileID: 11400000, guid: 96f7cbbaa5db1cc4e9dab008864f00f2, type: 2}
+  - {fileID: 11400000, guid: 54f19f9666ff0e6408852579e2322bed, type: 2}

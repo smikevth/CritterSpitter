@@ -4,6 +4,8 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
+
+
 public class UIManager : MonoBehaviour
 {
     [SerializeField]
@@ -25,6 +27,9 @@ public class UIManager : MonoBehaviour
     GameObject dialogueBox;
     [SerializeField]
     TextMeshProUGUI dialogueText;
+    int currentSpeaker = 0;
+    [SerializeField]
+    GameObject[] portraits;
     [SerializeField]
     GameObject helpBox;
     [SerializeField]
@@ -38,14 +43,18 @@ public class UIManager : MonoBehaviour
     [SerializeField]
     GameObject theAButton;
 
-
-
     private float barWidth;
-    
+
+    private void Awake()
+    {
+        gameData.OnPhaseChange.AddListener(SetForPhase);
+        gameData.OnIntroDialogueChange.AddListener(IntroDialogue);
+    }
+
     // Start is called before the first frame update
     void Start()
     {
-        gameData.OnPhaseChange.AddListener(SetForPhase);
+        
         barWidth = powerBar.sizeDelta.x;
     }
 
@@ -114,6 +123,20 @@ public class UIManager : MonoBehaviour
         powerIndicator.anchoredPosition = new Vector2(xPos, pos.y); 
     }
 
+    private void IntroDialogue()
+    {
+        if(gameData.IntroDialogueIndex >= 0)
+        {
+            Dialogue dialogue = gameData.IntroDialogues[gameData.IntroDialogueIndex];
+            if (currentSpeaker != dialogue.Speaker)
+            {
+                portraits[currentSpeaker].SetActive(false);
+                currentSpeaker = dialogue.Speaker;
+                portraits[currentSpeaker].SetActive(true);
+            }
+            StartCoroutine(TypeWords(dialogue.Text));
+        }
+    }
   
     private IEnumerator TypeWords(string words)
     {

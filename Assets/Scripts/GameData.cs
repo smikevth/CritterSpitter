@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-[CreateAssetMenu(fileName = "GameData", menuName = "ScriptableObjects/GameData", order = 0)]
+[CreateAssetMenu(fileName = "GameData", menuName = "ScriptableObjects/GameData", order = 1)]
 public class GameData : ScriptableObject
 {
     public float LaunchForce = 10.0f;
@@ -45,5 +45,17 @@ public class GameData : ScriptableObject
     [HideInInspector]
     public bool SkipText = false;
     public float TextSpeed = 0.05f;
-
+    [HideInInspector]
+    public UnityEvent OnIntroDialogueChange;
+    private int introDialogueIndex = -1;
+    public int IntroDialogueIndex
+    {
+        get => introDialogueIndex;
+        set
+        {
+            introDialogueIndex = value;
+            OnIntroDialogueChange?.Invoke();
+        }
+    }
+    public Dialogue[] IntroDialogues;
 }
