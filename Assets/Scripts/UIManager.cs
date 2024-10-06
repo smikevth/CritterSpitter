@@ -55,11 +55,12 @@ public class UIManager : MonoBehaviour
         {
             //intro (needs changing)
             case 0:
-                resetButton.gameObject.SetActive(false);
+                
                 startButton.gameObject.SetActive(true);
                 break;
             //power phase
             case 1:
+                resetButton.gameObject.SetActive(false);
                 startButton.gameObject.SetActive(false);
                 powerUI.SetActive(true);
                 break;

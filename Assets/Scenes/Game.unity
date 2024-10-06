@@ -9586,7 +9586,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: ab2bf10fe108b734d909fdb3ebfe29aa,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 6.12
+      value: 1.8
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ab2bf10fe108b734d909fdb3ebfe29aa,
         type: 3}
@@ -20182,7 +20182,6 @@ MonoBehaviour:
   gameData: {fileID: 11400000, guid: 10fcd422bde0fcc409b82c1bd809a49b, type: 2}
   critter: {fileID: 519541933}
   critterRB: {fileID: 1464512866}
-  cam: {fileID: 1633420225}
   ragdollRBs:
   - {fileID: 1464512866}
   - {fileID: 756245779}
@@ -30053,6 +30052,7 @@ GameObject:
   - component: {fileID: 1633420227}
   - component: {fileID: 1633420226}
   - component: {fileID: 1633420229}
+  - component: {fileID: 1633420230}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -30127,13 +30127,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1633420225}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.052335896, y: 0, z: 0, w: 0.9986295}
-  m_LocalPosition: {x: 0, y: 12.34, z: -6.12}
+  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 25, y: 12.5, z: 40}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 6, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
 --- !u!114 &1633420229
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30178,6 +30178,24 @@ MonoBehaviour:
     m_MipBias: 0
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
+--- !u!114 &1633420230
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1633420225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08984de35cd77cb44b4db1d6528c388b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameData: {fileID: 11400000, guid: 10fcd422bde0fcc409b82c1bd809a49b, type: 2}
+  critter: {fileID: 519541933}
+  anglePos: {x: 25, y: 12.5, z: 7}
+  launchRot: {x: 6, y: 90, z: 0}
+  launchPos: {x: 0, y: 13.5, z: -10}
+  panSpeed: 5
 --- !u!43 &1647748884
 Mesh:
   m_ObjectHideFlags: 0
@@ -31473,7 +31491,7 @@ Transform:
   m_GameObject: {fileID: 1765481361}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -70}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -37764,7 +37782,7 @@ SphereCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}

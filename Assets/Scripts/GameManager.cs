@@ -12,10 +12,6 @@ public class GameManager : MonoBehaviour
     [SerializeField][Tooltip("Part of the critter to apply force to")]
     Rigidbody critterRB;
     //Collider critterCollider;
-    [SerializeField]
-    GameObject cam;
-    Vector3 critterInitPos;
-    Vector3 cameraOffset;
 
     [SerializeField]
     Rigidbody[] ragdollRBs;
@@ -27,9 +23,9 @@ public class GameManager : MonoBehaviour
     
     void Start()
     {
+        InitializeGameData();
         //critterCollider = critter.GetComponent<Collider>();
-        critterInitPos = critter.transform.position;
-        cameraOffset = critterInitPos - cam.transform.position;
+        gameData.CritterInitPos = critter.transform.position;
         ragdollInitPos = new Vector3[ragdollRBs.Length];
         ragdollInitRot = new Quaternion[ragdollRBs.Length];
 
@@ -55,7 +51,6 @@ public class GameManager : MonoBehaviour
         }
         else if(gameData.CurrentPhase == 2) //launching
         {
-            cam.transform.position = critterRB.position - cameraOffset;
             gameData.Distance = ragdollRBs[0].transform.position.z - ragdollInitPos[0].z;
             gameData.DistanceTimer += Time.deltaTime;
             if(gameData.DistanceTimer >= gameData.DistanceTimerMax)
@@ -149,11 +144,8 @@ public class GameManager : MonoBehaviour
 
     public void ResetGame()
     {
-        gameData.CurrentPhase = 0;
-        gameData.IndicatorValue = 0;
-        gameData.Distance = 0;
-        gameData.DistanceTimer = 0.0f;
-        gameData.LastDistance = 0.0f;
+        gameData.CurrentPhase = 1;
+        InitializeGameDataPhaseless();
         //critterRB.isKinematic = true;
         ToggleRagdoll(false);
         //critter.transform.position = critterInitPos;
@@ -162,7 +154,6 @@ public class GameManager : MonoBehaviour
             ragdollRBs[i].transform.position = ragdollInitPos[i];
             ragdollRBs[i].transform.rotation = ragdollInitRot[i];
         }
-        cam.transform.position = critter.transform.position - cameraOffset;
         //critterRB.useGravity = false;
         //critterRB.isKinematic = false;
     }
@@ -174,5 +165,25 @@ public class GameManager : MonoBehaviour
         {
             boneRB.isKinematic = !isRagdoll;
         }
+    }
+
+    /// <summary>
+    /// Resets game data other than phase
+    /// </summary>
+    private void InitializeGameDataPhaseless()
+    {
+        gameData.IndicatorValue = 0;
+        gameData.Distance = 0;
+        gameData.DistanceTimer = 0.0f;
+        gameData.LastDistance = 0.0f;
+    }
+
+    /// <summary>
+    /// resets game data and phase (to replay intro)
+    /// </summary>
+    private void InitializeGameData()
+    {
+        gameData.CurrentPhase = 0;
+        InitializeGameDataPhaseless();
     }
 }

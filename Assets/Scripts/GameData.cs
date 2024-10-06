@@ -36,5 +36,6 @@ public class GameData : ScriptableObject
     [HideInInspector]
     //the moving number for the power indicator. -50 to 50
     public float IndicatorValue = 0.0f;
-
+    [HideInInspector]
+    public Vector3 CritterInitPos;
 }
