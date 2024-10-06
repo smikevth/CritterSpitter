@@ -35,7 +35,8 @@ public class UIManager : MonoBehaviour
     [SerializeField]
     [Tooltip("What the button help text says during end phase")]
     string endHelp = "Restart the game";
-    
+    [SerializeField]
+    GameObject theAButton;
 
 
 
@@ -81,6 +82,7 @@ public class UIManager : MonoBehaviour
                 powerUI.SetActive(false);
                 distanceBox.SetActive(true);
                 helpBox.SetActive(false);
+                theAButton.SetActive(false);
                 break;
             case 3: //ended
                 if(!isHelpHidden)
@@ -88,6 +90,7 @@ public class UIManager : MonoBehaviour
                     helpBox.SetActive(true);
                 }
                 helpText.text = endHelp;
+                theAButton.SetActive(true);
                 break;
             default:
                 break;
