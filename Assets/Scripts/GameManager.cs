@@ -88,7 +88,6 @@ public class GameManager : MonoBehaviour
         //critterRB.isKinematic = true;
         ToggleRagdoll(false);
         //critter.transform.position = critterInitPos;
-        Debug.Log(ragdollInitPos);
         for (int i = 0; i < ragdollRBs.Length; i++)
         {
             ragdollRBs[i].transform.position = ragdollInitPos[i];
