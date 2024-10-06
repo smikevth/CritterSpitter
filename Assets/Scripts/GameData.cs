@@ -7,7 +7,9 @@ using UnityEngine.Events;
 public class GameData : ScriptableObject
 {
     public float LaunchForce = 10.0f;
-    public float indicatorMax = 0.95f; //absolute value of maximum indicator value
+    public float IndicatorMax = 0.95f; //absolute value of maximum indicator value
+    [HideInInspector]
+    public float Distance = 0.0f;
 
     [HideInInspector]
     public UnityEvent OnPhaseChange;

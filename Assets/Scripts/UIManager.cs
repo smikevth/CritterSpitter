@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class UIManager : MonoBehaviour
 {
@@ -20,6 +21,8 @@ public class UIManager : MonoBehaviour
     RectTransform powerTarget;
     [SerializeField]
     RectTransform powerIndicator;
+    [SerializeField]
+    TextMeshProUGUI distanceText;
 
     private float barWidth;
     
@@ -36,6 +39,10 @@ public class UIManager : MonoBehaviour
         if(gameData.CurrentPhase == 1) //power phase
         {
             MoveIndicator();
+        }
+        else if(gameData.CurrentPhase == 2)
+        {
+            distanceText.text = Mathf.Round(gameData.Distance).ToString();
         }
     }
 
@@ -73,7 +80,7 @@ public class UIManager : MonoBehaviour
     {
         //move the indicator back and forth
         Vector3 pos = powerIndicator.anchoredPosition;
-        float xPos = gameData.IndicatorValue / gameData.indicatorMax * (barWidth/2);
+        float xPos = gameData.IndicatorValue / gameData.IndicatorMax * (barWidth/2);
         powerIndicator.anchoredPosition = new Vector2(xPos, pos.y); 
     }
 

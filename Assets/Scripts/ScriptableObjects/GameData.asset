@@ -12,9 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 241b00241c6b5214f8a4fc9a5cf73ed5, type: 3}
   m_Name: GameData
   m_EditorClassIdentifier: 
-  LaunchForce: 25
-  indicatorMax: 0.95
+  LaunchForce: 7
+  IndicatorMax: 0.95
+  Distance: 120.06911
   OnPhaseChange:
     m_PersistentCalls:
       m_Calls: []
-  IndicatorValue: -0.41035938
+  IndicatorValue: -0.006212093
