@@ -20,7 +20,13 @@ public class GameManager : MonoBehaviour
 
     private int indicatorDir = 1; //which way the indicator is moving 1=up -1=down
     // Start is called before the first frame update
-    
+
+    [SerializeField]
+    AudioClip spitSound;
+    [SerializeField]
+    AudioClip bounceSound;
+    AudioSource audioPlayer;
+
     void Start()
     {
         gameData.IntroDialogueIndex = -1;
@@ -29,7 +35,7 @@ public class GameManager : MonoBehaviour
         gameData.CritterInitPos = critter.transform.position;
         ragdollInitPos = new Vector3[ragdollRBs.Length];
         ragdollInitRot = new Quaternion[ragdollRBs.Length];
-
+        audioPlayer = GetComponent<AudioSource>();
 
         for (int i=0; i<ragdollRBs.Length; i++)
         {
@@ -133,6 +139,7 @@ public class GameManager : MonoBehaviour
         gameData.CurrentPhase = 2;
         //apply force to critter
         ToggleRagdoll(true);
+        audioPlayer.PlayOneShot(spitSound);
         Vector3 dir = new Vector3(0.0f, 1.0f, 1.0f);
         critterRB.AddForce(dir * gameData.LaunchForce * (1 - Mathf.Abs(gameData.IndicatorValue)), ForceMode.Impulse);
         //activate gravity
