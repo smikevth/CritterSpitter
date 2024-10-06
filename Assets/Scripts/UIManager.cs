@@ -53,7 +53,7 @@ public class UIManager : MonoBehaviour
     {
         switch(gameData.CurrentPhase)
         {
-            //pre game
+            //intro (needs changing)
             case 0:
                 resetButton.gameObject.SetActive(false);
                 startButton.gameObject.SetActive(true);
@@ -66,6 +66,8 @@ public class UIManager : MonoBehaviour
             //launching
             case 2:
                 powerUI.SetActive(false);
+                break;
+            case 3:
                 resetButton.gameObject.SetActive(true);
                 break;
             default:

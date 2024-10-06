@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class GameManager : MonoBehaviour
 {
@@ -47,7 +48,7 @@ public class GameManager : MonoBehaviour
         {
             gameData.IndicatorValue += indicatorDir * Time.deltaTime;
             //Debug.Log(gameData.IndicatorValue);
-            if(gameData.IndicatorValue >= gameData.IndicatorMax || gameData.IndicatorValue <= -gameData.IndicatorMax)
+            if((gameData.IndicatorValue >= gameData.IndicatorMax && indicatorDir > 0) || (gameData.IndicatorValue <= -gameData.IndicatorMax && indicatorDir < 0))
             {
                 indicatorDir *= -1;
             }
@@ -56,16 +57,82 @@ public class GameManager : MonoBehaviour
         {
             cam.transform.position = critterRB.position - cameraOffset;
             gameData.Distance = ragdollRBs[0].transform.position.z - ragdollInitPos[0].z;
+            gameData.DistanceTimer += Time.deltaTime;
+            if(gameData.DistanceTimer >= gameData.DistanceTimerMax)
+            {
+                gameData.DistanceTimer -= gameData.DistanceTimerMax;
+                if(gameData.Distance - gameData.LastDistance > gameData.StoppedThreshold)
+                {
+                    //still moving
+                    gameData.LastDistance = gameData.Distance;
+                }
+                else
+                {
+                    //stopped
+                    NextPhase();
+                }
+            }
         }
     }
 
-    /// <summary>
-    /// called from start button
-    /// </summary>
-    public void StartGame()
-    {
-        gameData.CurrentPhase = 1;
 
+
+    /// <summary>
+    /// Called from any (just Fire now) button input on keyboard and controller. Advances intro text or calls next phase.
+    /// </summary>
+    /// <param name="context"></param>
+    public void ButtonInput(InputAction.CallbackContext context)
+    {
+        if(context.performed)
+        {
+            Debug.Log("pushed");
+            switch (gameData.CurrentPhase)
+            {
+                case 0:
+                    //intro
+
+                    //if intro is still going, advance text
+
+                    //at end, next phase
+                    NextPhase();
+                    break;
+                case 1:
+                    //power phase
+                    NextPhase();
+                    break;
+                case 2:
+                    //launching, don't want to advance to next phase until stopped
+
+                    break;
+                default:
+                    NextPhase();
+                    break;
+            }
+        }
+    }
+
+    public void NextPhase()
+    {
+        gameData.CurrentPhase++;
+        switch(gameData.CurrentPhase)
+        {
+            case 1:
+                //power phase
+                //maybe add a delay here to prevent button mashing messing up launch
+                break;
+            case 2:
+                //launch
+                LaunchObject();
+                break;
+            case 3:
+                //ended
+
+                break;
+            default:
+                ResetGame();
+                break;
+
+        }
     }
 
     public void LaunchObject()
@@ -85,6 +152,8 @@ public class GameManager : MonoBehaviour
         gameData.CurrentPhase = 0;
         gameData.IndicatorValue = 0;
         gameData.Distance = 0;
+        gameData.DistanceTimer = 0.0f;
+        gameData.LastDistance = 0.0f;
         //critterRB.isKinematic = true;
         ToggleRagdoll(false);
         //critter.transform.position = critterInitPos;

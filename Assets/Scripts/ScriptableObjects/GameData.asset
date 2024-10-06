@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LaunchForce: 7
   IndicatorMax: 0.95
-  Distance: 120.06911
+  Distance: 0
   OnPhaseChange:
     m_PersistentCalls:
       m_Calls: []
-  IndicatorValue: -0.006212093
+  IndicatorValue: 0

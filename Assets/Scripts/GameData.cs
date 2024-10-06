@@ -10,10 +10,18 @@ public class GameData : ScriptableObject
     public float IndicatorMax = 0.95f; //absolute value of maximum indicator value
     [HideInInspector]
     public float Distance = 0.0f;
+    [HideInInspector]
+    public float DistanceTimer = 0.0f;
+    [Tooltip("Amount of time to wait to check distance against last distance")]
+    public float DistanceTimerMax = 2.0f;
+    [HideInInspector]
+    public float LastDistance = 0.0f;
+    [Tooltip("Max distance since last distance to be considered stopped")]
+    public float StoppedThreshold = 1.0f;
 
     [HideInInspector]
     public UnityEvent OnPhaseChange;
-    //0=start of game, 1=power phase, 2=launching
+    //0=intro sequence, 1=power phase, 2=launching, 3=ending
     private int currentPhase = 0;
     public int CurrentPhase
     {
