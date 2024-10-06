@@ -38,4 +38,12 @@ public class GameData : ScriptableObject
     public float IndicatorValue = 0.0f;
     [HideInInspector]
     public Vector3 CritterInitPos;
+
+    //text stuff//
+    [HideInInspector]
+    public bool IsTextPrinting = false;
+    [HideInInspector]
+    public bool SkipText = false;
+    public float TextSpeed = 0.05f;
+
 }

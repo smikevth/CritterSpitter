@@ -64,7 +64,7 @@ public class GameManager : MonoBehaviour
                 else
                 {
                     //stopped
-                    NextPhase();
+                    gameData.CurrentPhase = 3;
                 }
             }
         }
@@ -81,52 +81,37 @@ public class GameManager : MonoBehaviour
         if(context.performed)
         {
             Debug.Log("pushed");
-            switch (gameData.CurrentPhase)
-            {
-                case 0:
-                    //intro
-
-                    //if intro is still going, advance text
-
-                    //at end, next phase
-                    NextPhase();
-                    break;
-                case 1:
-                    //power phase
-                    NextPhase();
-                    break;
-                case 2:
-                    //launching, don't want to advance to next phase until stopped
-
-                    break;
-                default:
-                    NextPhase();
-                    break;
-            }
+            ButtonHandler();
         }
     }
 
-    public void NextPhase()
+    public void ButtonHandler()
     {
-        gameData.CurrentPhase++;
-        switch(gameData.CurrentPhase)
+        switch (gameData.CurrentPhase)
         {
+            case 0:
+                //intro
+
+                //if intro is still going, advance text
+
+                //at end, next phase
+                gameData.CurrentPhase++;
+                break;
             case 1:
                 //power phase
-                //maybe add a delay here to prevent button mashing messing up launch
+                LaunchObject();
                 break;
             case 2:
-                //launch
-                LaunchObject();
+                //launching, don't want to advance to next phase until stopped
+
                 break;
             case 3:
                 //ended
-
-                break;
-            default:
                 ResetGame();
                 break;
-
+            default:
+                
+                break;
         }
     }
 
@@ -139,7 +124,7 @@ public class GameManager : MonoBehaviour
         Vector3 dir = new Vector3(0.0f, 1.0f, 1.0f);
         critterRB.AddForce(dir * gameData.LaunchForce * (1 - Mathf.Abs(gameData.IndicatorValue)), ForceMode.Impulse);
         //activate gravity
-        critterRB.useGravity = true;
+        //critterRB.useGravity = true;
     }
 
     public void ResetGame()

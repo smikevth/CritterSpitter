@@ -10,10 +10,6 @@ public class UIManager : MonoBehaviour
     GameData gameData;
 
     [SerializeField]
-    Button startButton;
-    [SerializeField]
-    Button resetButton;
-    [SerializeField]
     GameObject powerUI;
     [SerializeField]
     RectTransform powerBar;
@@ -22,7 +18,26 @@ public class UIManager : MonoBehaviour
     [SerializeField]
     RectTransform powerIndicator;
     [SerializeField]
+    GameObject distanceBox;
+    [SerializeField]
     TextMeshProUGUI distanceText;
+    [SerializeField]
+    GameObject dialogueBox;
+    [SerializeField]
+    TextMeshProUGUI dialogueText;
+    [SerializeField]
+    GameObject helpBox;
+    [SerializeField]
+    TextMeshProUGUI helpText;
+    bool isHelpHidden = false;
+    [SerializeField][Tooltip ("What the button help text says during power phase")]
+    string powerHelp = "Spit the critter";
+    [SerializeField]
+    [Tooltip("What the button help text says during end phase")]
+    string endHelp = "Restart the game";
+    
+
+
 
     private float barWidth;
     
@@ -53,30 +68,39 @@ public class UIManager : MonoBehaviour
     {
         switch(gameData.CurrentPhase)
         {
-            //intro (needs changing)
-            case 0:
-                
-                startButton.gameObject.SetActive(true);
+            case 0: //intro (needs changing)
+
                 break;
-            //power phase
-            case 1:
-                resetButton.gameObject.SetActive(false);
-                startButton.gameObject.SetActive(false);
+            case 1: //power phase
+                dialogueBox.SetActive(false);
+                distanceBox.SetActive(false);
                 powerUI.SetActive(true);
+                helpText.text = powerHelp;
                 break;
-            //launching
-            case 2:
+            case 2: //launching
                 powerUI.SetActive(false);
+                distanceBox.SetActive(true);
+                helpBox.SetActive(false);
                 break;
-            case 3:
-                resetButton.gameObject.SetActive(true);
+            case 3: //ended
+                if(!isHelpHidden)
+                {
+                    helpBox.SetActive(true);
+                }
+                helpText.text = endHelp;
                 break;
             default:
                 break;
         }
     }
 
-
+    public void ToggleHelp()
+    {
+        if(gameData.CurrentPhase != 2)
+        {
+            helpBox.SetActive(!helpBox.activeSelf);
+        }
+    }
 
 
     private void MoveIndicator()
@@ -88,4 +112,29 @@ public class UIManager : MonoBehaviour
     }
 
   
+    private IEnumerator TypeWords(string words)
+    {
+        dialogueText.text = "";
+        gameData.IsTextPrinting = true;
+        for (int i=0; i<words.Length; i++)
+        {
+            dialogueText.text += words[i];
+            if(!gameData.SkipText)
+            {
+                /*if(gameData.TalkTimer >= gameData.TalkTimerMax)
+                {
+                    int rando = Random.Range(0, talkClips.Count);
+                    sfxPlayer.PlayOneShot(talkClips[rando]);
+                    gameData.TalkTimer - gameData.TalkTimerMax;
+                }*/
+                yield return new WaitForSeconds(gameData.TextSpeed);
+            }
+            else
+            {
+                dialogueText.text = words;
+            }
+        }
+        gameData.IsTextPrinting = false;
+        gameData.SkipText = false;
+    }
 }
