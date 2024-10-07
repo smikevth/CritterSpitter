@@ -23,8 +23,6 @@ public class GameManager : MonoBehaviour
 
     [SerializeField]
     AudioClip spitSound;
-    [SerializeField]
-    AudioClip bounceSound;
     AudioSource audioPlayer;
 
     [SerializeField]
