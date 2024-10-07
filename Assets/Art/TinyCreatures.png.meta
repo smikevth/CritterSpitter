@@ -1,0 +1,1293 @@
+fileFormatVersion: 2
+guid: 17bdfecf39a1ee44090205e83d3e8ef8
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: TinyCreatures_0
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 910
+        width: 120
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0a65d7a9f7cace4394f7705ed603e1a
+      internalID: -496035826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TinyCreatures_1
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 904
+        width: 104
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3837d6d0b680a6c428e5a777e3363f7f
+      internalID: 153757176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TinyCreatures_2
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 902
+        width: 112
+        height: 116
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be7b634aa5afdb0408027ee6ab851dc2
+      internalID: -530011705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TinyCreatures_3
+      rect:
+        serializedVersion: 2
+        x: 386
+        y: 922
+        width: 124
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4c4f782ef87156488f60c90883b40e1
+      internalID: -282763399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TinyCreatures_4
+      rect:
+        serializedVersion: 2
+        x: 519
+        y: 921
+        width: 114
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09294c6aa85b1ed419686d5e91b0ca5e
+      internalID: 1351649342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TinyCreatures_5
+      rect:
+        serializedVersion: 2
+        x: 638
+        y: 916
+        width: 132
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2cab62a33e778f144a6e5f09bc7b2a82
+      internalID: -148845178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TinyCreatures_6
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 897
+        width: 104
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8cd63ad129134d42a674b36f1fb819d
+      internalID: -1931332374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TinyCreatures_7
+      rect:
+        serializedVersion: 2
+        x: 907
+        y: 905
+        width: 106
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a0f8108cd203cf438cb116f75643736
+      internalID: 1277553080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TinyCreatures_8
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 783
+        width: 120
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c61dc17dbfdbac14691a4fa350b7a4d3
+      internalID: -336931860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TinyCreatures_9
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 801
+        width: 130
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29bfb80ab1bc7bc44b3ec802b7bc98ae
+      internalID: 63919374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TinyCreatures_10
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 812
+        width: 108
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8462b496d0a9639428e22fbebeba4047
+      internalID: 657069676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TinyCreatures_11
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 793
+        width: 114
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: adea50d7fd24ec543af8e20771ba0253
+      internalID: -335877675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TinyCreatures_12
+      rect:
+        serializedVersion: 2
+        x: 514
+        y: 779
+        width: 126
+        height: 106
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f52aff45b9362745bb380b50ec721b6
+      internalID: -1579332732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TinyCreatures_13
+      rect:
+        serializedVersion: 2
+        x: 657
+        y: 779
+        width: 94
+        height: 106
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc7d13fb78926614085c9e808e302070
+      internalID: 141654860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TinyCreatures_14
+      rect:
+        serializedVersion: 2
+        x: 769
+        y: 803
+        width: 126
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b39640399cd5f61439c0f64a6fb8f3c8
+      internalID: -747805505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TinyCreatures_15
+      rect:
+        serializedVersion: 2
+        x: 917
+        y: 803
+        width: 86
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c49deaff78172734ba0c76b0307595fd
+      internalID: -2142497753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TinyCreatures_16
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 644
+        width: 122
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 688cf0f02578def4db0aa4cebc2a4ad6
+      internalID: 1706993750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TinyCreatures_17
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 644
+        width: 122
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8395eac477b875d40a3f4295156a1976
+      internalID: 400231478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TinyCreatures_18
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 646
+        width: 126
+        height: 116
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3f1ee08d8cf5da4fa4983dc366b8e20
+      internalID: -1130488487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TinyCreatures_19
+      rect:
+        serializedVersion: 2
+        x: 403
+        y: 681
+        width: 90
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc5a4ff32dd7ec54a82bcc5001c7f0db
+      internalID: -419822009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TinyCreatures_20
+      rect:
+        serializedVersion: 2
+        x: 536
+        y: 641
+        width: 80
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6cf244d38e09dbb4a8e1b8a0aa860e58
+      internalID: 1828395902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TinyCreatures_21
+      rect:
+        serializedVersion: 2
+        x: 641
+        y: 656
+        width: 126
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1669580d0313ff341ab3546fc6a531dc
+      internalID: -1593698348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TinyCreatures_22
+      rect:
+        serializedVersion: 2
+        x: 771
+        y: 641
+        width: 122
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 103c27d28a2a4e642be3321f42c267ce
+      internalID: 1766614035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TinyCreatures_23
+      rect:
+        serializedVersion: 2
+        x: 903
+        y: 662
+        width: 114
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54f9d6a89f9dd0742b369841f08d142a
+      internalID: 1944068397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TinyCreatures_24
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 515
+        width: 70
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c827a245c5faa77408b81ef8459be889
+      internalID: -833768300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TinyCreatures_25
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 526
+        width: 106
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1d39a2fb6ba5e247860b8f9ee4a03fc
+      internalID: -961646233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TinyCreatures_26
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 513
+        width: 60
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8813745e85193bd4b863677fb426ee63
+      internalID: -1072530188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TinyCreatures_27
+      rect:
+        serializedVersion: 2
+        x: 388
+        y: 538
+        width: 120
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ed67555f57a9484a9d81b9dc5886bb3
+      internalID: -1833163164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TinyCreatures_28
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 520
+        width: 128
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63f1b80336460a24e9eeffcd594afa2f
+      internalID: -1022171410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TinyCreatures_29
+      rect:
+        serializedVersion: 2
+        x: 657
+        y: 513
+        width: 94
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e12b5a37a465b684d970601f1acf0262
+      internalID: 1681293548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TinyCreatures_30
+      rect:
+        serializedVersion: 2
+        x: 779
+        y: 395
+        width: 234
+        height: 235
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ecc56d9442bb4a8408eefe9ca0f535e5
+      internalID: 1921919912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TinyCreatures_31
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 400
+        width: 236
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5a765b788a19de4188df5fdbe4e84af
+      internalID: -706478752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TinyCreatures_32
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 383
+        width: 128
+        height: 129
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 969e99239ba4b2b4e9a36e748f6ab968
+      internalID: -207702398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TinyCreatures_33
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 465
+        width: 47
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9eba1f3933bb89c498b2ae9910f3ce78
+      internalID: 405489658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TinyCreatures_34
+      rect:
+        serializedVersion: 2
+        x: 465
+        y: 465
+        width: 47
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95e8ef9f9e381154e8f513e392b79b6e
+      internalID: 1834468579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TinyCreatures_35
+      rect:
+        serializedVersion: 2
+        x: 525
+        y: 397
+        width: 103
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a648ef72bc050004e841547123667548
+      internalID: 1862026349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TinyCreatures_36
+      rect:
+        serializedVersion: 2
+        x: 655
+        y: 386
+        width: 98
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f5b215c87140a74394a3be89c4e84ad
+      internalID: 2029776231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TinyCreatures_37
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 383
+        width: 47
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f48b1ce1d4f7df45aa924401d15612e
+      internalID: -2014780193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TinyCreatures_38
+      rect:
+        serializedVersion: 2
+        x: 465
+        y: 383
+        width: 47
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e847bc4be619ba478ee8faf2d5d3418
+      internalID: 685903802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TinyCreatures_39
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 136
+        width: 233
+        height: 239
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 477d550c7998f124292106afc7b4c9f4
+      internalID: 1272479741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TinyCreatures_40
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 264
+        width: 233
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e80a0a0029c6dfa4fa4fd1913532543e
+      internalID: 1170789484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TinyCreatures_41
+      rect:
+        serializedVersion: 2
+        x: 529
+        y: 138
+        width: 222
+        height: 238
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 247a7874ab95bc443afde40c50ebbe9c
+      internalID: -2147380126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TinyCreatures_42
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 265
+        width: 104
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0f891e5a34b9554cb53c80828193b59
+      internalID: -1181383091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TinyCreatures_43
+      rect:
+        serializedVersion: 2
+        x: 913
+        y: 261
+        width: 94
+        height: 118
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 810ddbbe10f2b2847a2e6dc39d637126
+      internalID: -210017789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TinyCreatures_44
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 135
+        width: 111
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7626e16a6d34c84aaae8b2052611a26
+      internalID: -417417329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TinyCreatures_45
+      rect:
+        serializedVersion: 2
+        x: 393
+        y: 158
+        width: 110
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 362075245aa26d4459491d865192a370
+      internalID: -2142635786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TinyCreatures_46
+      rect:
+        serializedVersion: 2
+        x: 770
+        y: 2
+        width: 252
+        height: 252
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96c451038ead0f94b815e73a03e52609
+      internalID: -930513702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TinyCreatures_47
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 14
+        width: 246
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94ef73c265d2ef2438ac6098b62c18cf
+      internalID: -891137697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TinyCreatures_48
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 41
+        width: 62
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20879b0b5e2dbe84cbdb430d854e52ef
+      internalID: -1086620069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TinyCreatures_49
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 1
+        width: 92
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36995607af218424f8b3e18854fe031d
+      internalID: 641506331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TinyCreatures_50
+      rect:
+        serializedVersion: 2
+        x: 515
+        y: 6
+        width: 42
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c9c2581f8efe184ab6d6bb670acda78
+      internalID: 438919911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TinyCreatures_51
+      rect:
+        serializedVersion: 2
+        x: 559
+        y: 6
+        width: 77
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4814be6c0d5457a4589d1357aaf77ed5
+      internalID: -2002708105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TinyCreatures_52
+      rect:
+        serializedVersion: 2
+        x: 642
+        y: 6
+        width: 124
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20122f38e188ad340b8fc75a1918a7cf
+      internalID: 678214437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 4120d50a474ecd144a25ece96c38ef98
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      TinyCreatures_0: -496035826
+      TinyCreatures_1: 153757176
+      TinyCreatures_10: 657069676
+      TinyCreatures_11: -335877675
+      TinyCreatures_12: -1579332732
+      TinyCreatures_13: 141654860
+      TinyCreatures_14: -747805505
+      TinyCreatures_15: -2142497753
+      TinyCreatures_16: 1706993750
+      TinyCreatures_17: 400231478
+      TinyCreatures_18: -1130488487
+      TinyCreatures_19: -419822009
+      TinyCreatures_2: -530011705
+      TinyCreatures_20: 1828395902
+      TinyCreatures_21: -1593698348
+      TinyCreatures_22: 1766614035
+      TinyCreatures_23: 1944068397
+      TinyCreatures_24: -833768300
+      TinyCreatures_25: -961646233
+      TinyCreatures_26: -1072530188
+      TinyCreatures_27: -1833163164
+      TinyCreatures_28: -1022171410
+      TinyCreatures_29: 1681293548
+      TinyCreatures_3: -282763399
+      TinyCreatures_30: 1921919912
+      TinyCreatures_31: -706478752
+      TinyCreatures_32: -207702398
+      TinyCreatures_33: 405489658
+      TinyCreatures_34: 1834468579
+      TinyCreatures_35: 1862026349
+      TinyCreatures_36: 2029776231
+      TinyCreatures_37: -2014780193
+      TinyCreatures_38: 685903802
+      TinyCreatures_39: 1272479741
+      TinyCreatures_4: 1351649342
+      TinyCreatures_40: 1170789484
+      TinyCreatures_41: -2147380126
+      TinyCreatures_42: -1181383091
+      TinyCreatures_43: -210017789
+      TinyCreatures_44: -417417329
+      TinyCreatures_45: -2142635786
+      TinyCreatures_46: -930513702
+      TinyCreatures_47: -891137697
+      TinyCreatures_48: -1086620069
+      TinyCreatures_49: 641506331
+      TinyCreatures_5: -148845178
+      TinyCreatures_50: 438919911
+      TinyCreatures_51: -2002708105
+      TinyCreatures_52: 678214437
+      TinyCreatures_6: -1931332374
+      TinyCreatures_7: 1277553080
+      TinyCreatures_8: -336931860
+      TinyCreatures_9: 63919374
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

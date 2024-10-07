@@ -27,12 +27,18 @@ public class GameManager : MonoBehaviour
     AudioClip bounceSound;
     AudioSource audioPlayer;
 
+    [SerializeField]
+    GameObject hippoHead;
+    Quaternion hippoRot;
+    float hippoRotF = 10.0f;
+
     void Start()
     {
         gameData.IntroDialogueIndex = -1;
         InitializeGameData();
         //critterCollider = critter.GetComponent<Collider>();
         gameData.CritterInitPos = critter.transform.position;
+        hippoRot = hippoHead.transform.rotation;
         ragdollInitPos = new Vector3[ragdollRBs.Length];
         ragdollInitRot = new Quaternion[ragdollRBs.Length];
         audioPlayer = GetComponent<AudioSource>();
@@ -50,6 +56,7 @@ public class GameManager : MonoBehaviour
         if (gameData.CurrentPhase == 1) //angle phase
         {
             gameData.AngleValue += indicatorDir * Time.deltaTime;
+            hippoHead.transform.Rotate(new Vector3(-indicatorDir * Time.deltaTime * hippoRotF, 0.0f, 0.0f));
             if ((gameData.AngleValue >= gameData.IndicatorMax && indicatorDir > 0) || (gameData.AngleValue <= -gameData.IndicatorMax && indicatorDir < 0))
             {
                 indicatorDir *= -1;
@@ -95,7 +102,6 @@ public class GameManager : MonoBehaviour
     {
         if(context.performed)
         {
-            Debug.Log("pushed");
             ButtonHandler();
         }
     }
@@ -153,7 +159,6 @@ public class GameManager : MonoBehaviour
         ToggleRagdoll(true);
         audioPlayer.PlayOneShot(spitSound);
         float angle = 45 - (gameData.AngleValue * 35);
-        Debug.Log(angle + ","+ Mathf.Sin(Mathf.Deg2Rad * angle) + "," + Mathf.Cos(Mathf.Deg2Rad * angle));
         Vector3 dir = new Vector3(0.0f, Mathf.Cos(Mathf.Deg2Rad * angle), Mathf.Sin(Mathf.Deg2Rad * angle)).normalized;
         critterRB.AddForce(dir * gameData.LaunchForce * (1 - Mathf.Abs(gameData.PowerValue)), ForceMode.Impulse);
         //activate gravity
@@ -166,6 +171,7 @@ public class GameManager : MonoBehaviour
         InitializeGameDataPhaseless();
         //critterRB.isKinematic = true;
         ToggleRagdoll(false);
+        hippoHead.transform.rotation = hippoRot;
         //critter.transform.position = critterInitPos;
         for (int i = 0; i < ragdollRBs.Length; i++)
         {
