@@ -61,4 +61,6 @@ public class GameData : ScriptableObject
         }
     }
     public Dialogue[] IntroDialogues;
+    public float HighScore = 0.0f;
+    public bool NewHighScore = false;
 }

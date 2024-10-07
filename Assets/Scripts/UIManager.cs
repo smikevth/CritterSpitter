@@ -58,6 +58,17 @@ public class UIManager : MonoBehaviour
     [SerializeField]
     Button[] qualityButtons;
 
+    [SerializeField]
+    GameObject endGameScreen;
+    [SerializeField]
+    GameObject prevBest;
+    [SerializeField]
+    GameObject newBest;
+    [SerializeField]
+    TextMeshProUGUI currentText;
+    [SerializeField]
+    TextMeshProUGUI bestText;
+
     private void Awake()
     {
         gameData.OnPhaseChange.AddListener(SetForPhase);
@@ -99,7 +110,8 @@ public class UIManager : MonoBehaviour
 
                 break;
             case 1: //angle phase
-                distanceBox.SetActive(false);
+                endGameScreen.SetActive(false);
+                
                 dialogueBox.SetActive(false);
                 angleUI.SetActive(true);
                 helpText.text = angleHelp;
@@ -121,10 +133,29 @@ public class UIManager : MonoBehaviour
                     helpBox.SetActive(true);
                 }
                 helpText.text = endHelp;
+                distanceBox.SetActive(false);
+                ShowEndScreen();
                 theAButton.SetActive(true);
                 break;
             default:
                 break;
+        }
+    }
+
+    void ShowEndScreen()
+    {
+        endGameScreen.SetActive(true);
+        currentText.text = gameData.Distance + "m";
+        if (gameData.NewHighScore)
+        {
+            prevBest.SetActive(false);
+            newBest.SetActive(true);
+        }
+        else
+        {
+            prevBest.SetActive(true);
+            newBest.SetActive(false);
+            bestText.text = gameData.HighScore + "m";
         }
     }
 

@@ -86,6 +86,11 @@ public class GameManager : MonoBehaviour
                 else
                 {
                     //stopped
+                    if(gameData.Distance > gameData.HighScore)
+                    {
+                        gameData.HighScore = gameData.Distance;
+                        gameData.NewHighScore = true;
+                    }
                     gameData.CurrentPhase = 4;
                 }
             }
@@ -204,6 +209,7 @@ public class GameManager : MonoBehaviour
         gameData.SkipText = false;
         gameData.IsTextPrinting = false;
         gameData.IntroDialogueIndex = 0;
+        gameData.NewHighScore = false;
     }
 
     /// <summary>
