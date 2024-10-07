@@ -145,7 +145,7 @@ public class UIManager : MonoBehaviour
     void ShowEndScreen()
     {
         endGameScreen.SetActive(true);
-        currentText.text = gameData.Distance + "m";
+        currentText.text = Mathf.Round(gameData.Distance) + "m";
         if (gameData.NewHighScore)
         {
             prevBest.SetActive(false);
@@ -155,7 +155,7 @@ public class UIManager : MonoBehaviour
         {
             prevBest.SetActive(true);
             newBest.SetActive(false);
-            bestText.text = gameData.HighScore + "m";
+            bestText.text = Mathf.Round(gameData.HighScore) + "m";
         }
     }
 
