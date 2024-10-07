@@ -14,11 +14,13 @@ public class UIManager : MonoBehaviour
     [SerializeField]
     GameObject powerUI;
     [SerializeField]
+    GameObject angleUI;
+    [SerializeField]
     RectTransform powerBar;
     [SerializeField]
-    RectTransform powerTarget;
-    [SerializeField]
     RectTransform powerIndicator;
+    [SerializeField]
+    RectTransform angleIndicator;
     [SerializeField]
     GameObject distanceBox;
     [SerializeField]
@@ -35,6 +37,9 @@ public class UIManager : MonoBehaviour
     [SerializeField]
     TextMeshProUGUI helpText;
     bool isHelpHidden = false;
+    [SerializeField]
+    [Tooltip("What the button help text says during angle phase")]
+    string angleHelp = "Set the angle";
     [SerializeField][Tooltip ("What the button help text says during power phase")]
     string powerHelp = "Spit the critter";
     [SerializeField]
@@ -61,11 +66,15 @@ public class UIManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(gameData.CurrentPhase == 1) //power phase
+        if (gameData.CurrentPhase == 1) //angle phase
         {
-            MoveIndicator();
+            MoveAngleIndicator();
         }
-        else if(gameData.CurrentPhase == 2)
+        else if (gameData.CurrentPhase == 2) //power phase
+        {
+            MovePowerIndicator();
+        }
+        else if(gameData.CurrentPhase == 3)
         {
             distanceText.text = Mathf.Round(gameData.Distance).ToString();
         }
@@ -81,19 +90,24 @@ public class UIManager : MonoBehaviour
             case 0: //intro (needs changing)
 
                 break;
-            case 1: //power phase
-                dialogueBox.SetActive(false);
+            case 1: //angle phase
                 distanceBox.SetActive(false);
+                dialogueBox.SetActive(false);
+                angleUI.SetActive(true);
+                helpText.text = angleHelp;
+                break;
+            case 2: //power phase
+                angleUI.SetActive(false);
                 powerUI.SetActive(true);
                 helpText.text = powerHelp;
                 break;
-            case 2: //launching
+            case 3: //launching
                 powerUI.SetActive(false);
                 distanceBox.SetActive(true);
                 helpBox.SetActive(false);
                 theAButton.SetActive(false);
                 break;
-            case 3: //ended
+            case 4: //ended
                 if(!isHelpHidden)
                 {
                     helpBox.SetActive(true);
@@ -108,19 +122,26 @@ public class UIManager : MonoBehaviour
 
     public void ToggleHelp()
     {
-        if(gameData.CurrentPhase != 2)
+        if(gameData.CurrentPhase != 3)
         {
             helpBox.SetActive(!helpBox.activeSelf);
         }
     }
 
 
-    private void MoveIndicator()
+    private void MovePowerIndicator()
     {
         //move the indicator back and forth
         Vector3 pos = powerIndicator.anchoredPosition;
-        float xPos = gameData.IndicatorValue / gameData.IndicatorMax * (barWidth/2);
+        float xPos = gameData.PowerValue / gameData.IndicatorMax * (barWidth/2);
         powerIndicator.anchoredPosition = new Vector2(xPos, pos.y); 
+    }
+    private void MoveAngleIndicator()
+    {
+        //move the indicator back and forth
+        Vector3 pos = angleIndicator.anchoredPosition;
+        float xPos = gameData.AngleValue / gameData.IndicatorMax * (barWidth / 2);
+        angleIndicator.anchoredPosition = new Vector2(xPos, pos.y);
     }
 
     private void IntroDialogue()

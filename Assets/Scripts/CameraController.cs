@@ -14,6 +14,7 @@ public class CameraController : MonoBehaviour
     [SerializeField]
     [Tooltip("Where the camera moves to during the intro and will be at in angle phase")]
     Vector3 anglePos;
+    Quaternion angleRot = new Quaternion(); //the rotation of the camera in angle phase
     [SerializeField]
     [Tooltip("How much the camera rotates from intro to power phase")]
     Vector3 launchRot;
@@ -41,7 +42,7 @@ public class CameraController : MonoBehaviour
                 transform.position += Vector3.back * panSpeed * Time.deltaTime;
             }
         }
-        else  if(gameData.CurrentPhase == 2) //launching
+        else  if(gameData.CurrentPhase == 3) //launching
         {
             transform.position = critter.transform.position - cameraOffset;
         }
@@ -56,6 +57,19 @@ public class CameraController : MonoBehaviour
 
                 break;
             case 1:
+                //angle
+                transform.position = anglePos;
+                if (isRotated)
+                {
+                    transform.rotation = angleRot;
+                    isRotated = false;
+                }
+                else
+                {
+                    angleRot = transform.rotation;
+                }
+                break;
+            case 2:
                 //power
                 transform.position = launchPos;
                 if(!isRotated)
@@ -65,11 +79,11 @@ public class CameraController : MonoBehaviour
                     isRotated = true;
                 }
                 break;
-            case 2:
+            case 3:
                 //launching
   
                 break;
-            case 3:
+            case 4:
                 //end
 
                 break;
@@ -77,10 +91,5 @@ public class CameraController : MonoBehaviour
 
                 break;
         }
-    }
-
-    void IntroSequence()
-    {
-
     }
 }

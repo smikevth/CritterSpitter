@@ -12,19 +12,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 241b00241c6b5214f8a4fc9a5cf73ed5, type: 3}
   m_Name: GameData
   m_EditorClassIdentifier: 
-  LaunchForce: 7
+  LaunchForce: 10
   IndicatorMax: 0.95
-  Distance: 251.38249
-  DistanceTimer: 1.5155318
+  Distance: 79.46574
+  DistanceTimer: 0.89801675
   DistanceTimerMax: 2
-  LastDistance: 249.98938
+  LastDistance: 55.07636
   StoppedThreshold: 1
   OnPhaseChange:
     m_PersistentCalls:
       m_Calls: []
-  IndicatorValue: -0.0865716
-  CritterInitPos: {x: 0, y: 7.02, z: 1.8}
-  IsTextPrinting: 0
+  PowerValue: 0.17192723
+  AngleValue: -0.0181308
+  CritterInitPos: {x: 0, y: 7.0199995, z: 1.7999997}
+  IsTextPrinting: 1
   SkipText: 0
   TextSpeed: 0.05
   OnIntroDialogueChange:

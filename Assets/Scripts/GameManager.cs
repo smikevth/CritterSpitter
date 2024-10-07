@@ -47,16 +47,24 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(gameData.CurrentPhase == 1) //power phase
+        if (gameData.CurrentPhase == 1) //angle phase
         {
-            gameData.IndicatorValue += indicatorDir * Time.deltaTime;
-            //Debug.Log(gameData.IndicatorValue);
-            if((gameData.IndicatorValue >= gameData.IndicatorMax && indicatorDir > 0) || (gameData.IndicatorValue <= -gameData.IndicatorMax && indicatorDir < 0))
+            gameData.AngleValue += indicatorDir * Time.deltaTime;
+            if ((gameData.AngleValue >= gameData.IndicatorMax && indicatorDir > 0) || (gameData.AngleValue <= -gameData.IndicatorMax && indicatorDir < 0))
             {
                 indicatorDir *= -1;
             }
         }
-        else if(gameData.CurrentPhase == 2) //launching
+        if (gameData.CurrentPhase == 2) //power phase
+        {
+            gameData.PowerValue += indicatorDir * Time.deltaTime;
+            //Debug.Log(gameData.IndicatorValue);
+            if((gameData.PowerValue >= gameData.IndicatorMax && indicatorDir > 0) || (gameData.PowerValue <= -gameData.IndicatorMax && indicatorDir < 0))
+            {
+                indicatorDir *= -1;
+            }
+        }
+        else if(gameData.CurrentPhase == 3) //launching
         {
             gameData.Distance = ragdollRBs[0].transform.position.z - ragdollInitPos[0].z;
             gameData.DistanceTimer += Time.deltaTime;
@@ -71,7 +79,7 @@ public class GameManager : MonoBehaviour
                 else
                 {
                     //stopped
-                    gameData.CurrentPhase = 3;
+                    gameData.CurrentPhase = 4;
                 }
             }
         }
@@ -116,14 +124,18 @@ public class GameManager : MonoBehaviour
                 }
                 break;
             case 1:
+                //angle phase
+                gameData.CurrentPhase++;
+                break;
+            case 2:
                 //power phase
                 LaunchObject();
                 break;
-            case 2:
+            case 3:
                 //launching, don't want to advance to next phase until stopped
 
                 break;
-            case 3:
+            case 4:
                 //ended
                 ResetGame();
                 break;
@@ -136,12 +148,14 @@ public class GameManager : MonoBehaviour
     public void LaunchObject()
     {
         //set phase
-        gameData.CurrentPhase = 2;
+        gameData.CurrentPhase = 3;
         //apply force to critter
         ToggleRagdoll(true);
         audioPlayer.PlayOneShot(spitSound);
-        Vector3 dir = new Vector3(0.0f, 1.0f, 1.0f);
-        critterRB.AddForce(dir * gameData.LaunchForce * (1 - Mathf.Abs(gameData.IndicatorValue)), ForceMode.Impulse);
+        float angle = 45 - (gameData.AngleValue * 35);
+        Debug.Log(angle + ","+ Mathf.Sin(Mathf.Deg2Rad * angle) + "," + Mathf.Cos(Mathf.Deg2Rad * angle));
+        Vector3 dir = new Vector3(0.0f, Mathf.Cos(Mathf.Deg2Rad * angle), Mathf.Sin(Mathf.Deg2Rad * angle)).normalized;
+        critterRB.AddForce(dir * gameData.LaunchForce * (1 - Mathf.Abs(gameData.PowerValue)), ForceMode.Impulse);
         //activate gravity
         //critterRB.useGravity = true;
     }
@@ -176,7 +190,8 @@ public class GameManager : MonoBehaviour
     /// </summary>
     private void InitializeGameDataPhaseless()
     {
-        gameData.IndicatorValue = 0;
+        gameData.PowerValue = 0;
+        gameData.AngleValue = 0;
         gameData.Distance = 0;
         gameData.DistanceTimer = 0.0f;
         gameData.LastDistance = 0.0f;

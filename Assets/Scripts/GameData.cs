@@ -21,7 +21,7 @@ public class GameData : ScriptableObject
 
     [HideInInspector]
     public UnityEvent OnPhaseChange;
-    //0=intro sequence, 1=power phase, 2=launching, 3=ending
+    //0=intro sequence, 1=angle phase,  2=power phase, 3=launching, 4=ending
     private int currentPhase = 0;
     public int CurrentPhase
     {
@@ -34,8 +34,11 @@ public class GameData : ScriptableObject
     }
 
     [HideInInspector]
-    //the moving number for the power indicator. -50 to 50
-    public float IndicatorValue = 0.0f;
+    //the moving number for the power indicator.
+    public float PowerValue = 0.0f;
+    [HideInInspector]
+    //the moving number for the angle indicator.
+    public float AngleValue = 0.0f;
     [HideInInspector]
     public Vector3 CritterInitPos;
 

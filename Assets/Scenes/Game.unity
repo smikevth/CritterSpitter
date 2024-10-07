@@ -23797,9 +23797,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameData: {fileID: 11400000, guid: 10fcd422bde0fcc409b82c1bd809a49b, type: 2}
   powerUI: {fileID: 1573238024}
+  angleUI: {fileID: 450893173}
   powerBar: {fileID: 1915344618}
-  powerTarget: {fileID: 1898004608}
   powerIndicator: {fileID: 1718134061}
+  angleIndicator: {fileID: 1081221957}
   distanceBox: {fileID: 404181859}
   distanceText: {fileID: 1286583415}
   dialogueBox: {fileID: 1075241729}
@@ -23809,6 +23810,7 @@ MonoBehaviour:
   - {fileID: 1104523091}
   helpBox: {fileID: 142579152}
   helpText: {fileID: 1092372056}
+  angleHelp: Set the angle
   powerHelp: Spit the critter
   endHelp: Restart the game
   theAButton: {fileID: 1463619769}
