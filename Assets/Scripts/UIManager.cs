@@ -47,8 +47,16 @@ public class UIManager : MonoBehaviour
     string endHelp = "Restart the game";
     [SerializeField]
     GameObject theAButton;
-
     private float barWidth;
+    [SerializeField]
+    GameObject settingsMenu;
+
+    [SerializeField]
+    AudioSource musicPlayer;
+    [SerializeField]
+    AudioSource sfxPlayer;
+    [SerializeField]
+    Button[] qualityButtons;
 
     private void Awake()
     {
@@ -59,8 +67,8 @@ public class UIManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
         barWidth = powerBar.sizeDelta.x;
+        SetQuality(QualitySettings.GetQualityLevel());
     }
 
     // Update is called once per frame
@@ -183,5 +191,20 @@ public class UIManager : MonoBehaviour
         }
         gameData.IsTextPrinting = false;
         gameData.SkipText = false;
+    }
+
+    public void ToggleSettingsMenu()
+    {
+        settingsMenu.SetActive(!settingsMenu.activeSelf);
+    }
+
+    public void SetQuality(int quality)
+    {
+        QualitySettings.SetQualityLevel(quality, true);
+        for(int i=0; i<qualityButtons.Length; i++)
+        {
+            qualityButtons[i].interactable = (i == quality) ? false : true;
+        }
+        Debug.Log(QualitySettings.GetQualityLevel());
     }
 }
